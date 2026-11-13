@@ -1,3 +1,4 @@
+
 const result = document.getElementById("result");
 
 const params = new URLSearchParams(window.location.search);
@@ -13,12 +14,18 @@ async function getUser() {
     console.log("GitHub API URL:", url);
 
     try {
-        const response = await fetch(url, { 
+        const response = await fetch(url, {
             method: "GET",
             headers: {
                 "Accept": "application/vnd.github+json"
             }
         });
+
+//          console.log("Status:", response.status);
+//          console.log("Remaining:", response.headers.get("X-RateLimit-Remaining"));
+//          console.log("Reset:", response.headers.get("X-RateLimit-Reset"));
+//          console.log("Response:", await response.clone().json());
+
 
         if (!response.ok) {
             if (response.status === 404) {
@@ -30,10 +37,12 @@ async function getUser() {
 
         const data = await response.json();
 
-        console.table(data);
-        console.log(data.id);
 
-        result.innerText = `Name : ${data.name ||  data.login} `;
+        createCard(data); 
+
+        //console.table(data);
+
+        // result.innerText = `Name: ${data.name || data.login} | Bio: ${data.bio || "No bio available"}`;
 
     } catch (error) {
         console.error("Error fetching data:", error);
