@@ -1,4 +1,3 @@
-
 const result = document.getElementById("result");
 
 const params = new URLSearchParams(window.location.search);
@@ -14,7 +13,7 @@ async function getUser() {
     console.log("GitHub API URL:", url);
 
     try {
-        const response = await fetch(url, {
+        const response = await fetch(url, { 
             method: "GET",
             headers: {
                 "Accept": "application/vnd.github+json"
@@ -31,9 +30,10 @@ async function getUser() {
 
         const data = await response.json();
 
-        console.log(data);
+        console.table(data);
+        console.log(data.id);
 
-        result.innerText = `Name: ${data.name || data.login} | Bio: ${data.bio || "No bio available"}`;
+        result.innerText = `Name : ${data.name ||  data.login} `;
 
     } catch (error) {
         console.error("Error fetching data:", error);
