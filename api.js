@@ -2,6 +2,7 @@ const username = document.getElementById("username");
 const search = document.getElementById("search");
 const result = document.getElementById("result");
 
+
 search.addEventListener("submit", (event) => {
     event.preventDefault();
 
