@@ -7,6 +7,8 @@ const repos = document.getElementById("repos");
 const followers = document.getElementById("followers");
 const following = document.getElementById("following");
 const company = document.getElementById("company");
+const userLocation = document.getElementById("location");
+const createdAt = document.getElementById("created_at");
 
 const link = document.getElementById("link");
 
@@ -21,10 +23,13 @@ function createCard(data) {
 
     repos.textContent = data.public_repos;
     followers.textContent = data.followers;
-    following.textContent = data.following;
-    company.textContent = data.company ;
+    following.textContent = data.following; 
+    company.textContent =  `Company : ${(data.company )} || homeless ` 
 
-    
+    userLocation.textContent = data.location || "Location not specified";
+    createdAt.textContent = ` Acc created at : ${new Date(data.created_at).toLocaleDateString()}`;
+
+
 
 
     link.href = data.html_url;
