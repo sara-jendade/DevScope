@@ -8,8 +8,10 @@
     <title>DevScope - Recherche</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <script src="card.js" defer></script>
     <script src="search.js" defer></script>
+    <script src="repos.js" defer></script>
 </head>
 
 <body class="min-h-screen bg-gradient-to-br from-[#030303] via-[#001A08] to-[#00FF41] text-white flex flex-col">
@@ -19,65 +21,53 @@
         <nav class="flex h-20 items-center justify-between px-4 sm:px-8">
 
             <a href="index.html" class="flex items-center gap-3">
-
                 <div class="size-5 shrink-0 rounded-full bg-radial-[at_50%_75%] from-[#B7FFCB] via-[#00FF41] to-[#004D16] to-90% shadow-[0_0_12px_rgba(0,255,65,0.6)]"></div>
 
                 <span class="font-['Redaction'] text-xl font-bold text-white">
                     DevScope
                 </span>
-
             </a>
 
             <div class="flex items-center gap-4 sm:gap-8">
 
-                <a
-                    href="recherche.html"
-                    class="font-['Redaction'] text-base font-bold text-white transition-colors hover:text-[#00FF41]"
-                >
+                <a href="recherche.html"
+                    class="font-['Redaction'] text-base font-bold text-white transition-colors hover:text-[#00FF41]">
                     Recherche
                 </a>
 
-                <a
-                    href="shortlist.html"
-                    class="font-['Redaction'] text-base font-bold text-white transition-colors hover:text-[#00FF41]"
-                >
+                <a href="shortlist.html"
+                    class="font-['Redaction'] text-base font-bold text-white transition-colors hover:text-[#00FF41]">
                     Short List
                 </a>
 
+            </div>
         </nav>
-
     </header>
 
-    <main class="flex-1 flex flex-col items-center justify-center p-4">
+    <main class="flex-1 flex flex-col items-center p-4">
 
 
-        <div id="result" class="w-full max-w-2xl">
+        <div id="result" class="w-full max-w-2xl mt-10">
 
             <div class="rounded-3xl border border-white/20 bg-black/40 p-6 shadow-xl">
 
                 <div class="flex items-center gap-4">
 
-                    <img
-                        id="profile"
-                        src=""
-                        alt="GitHub avatar"
-                        class="size-20 rounded-full border-2 border-[#00FF41]"
-                    >
+                    <img id="profile" src="" alt="GitHub avatar"
+                        class="size-20 rounded-full border-2 border-[#00FF41]">
 
                     <div>
-                        <h2 id="name" class="text-2xl font-bold">
-                        </h2>
-
-                        <p id="username" class="text-[#00FF41]">
-                        </p>
+                        <h2 id="name" class="text-2xl font-bold"></h2>
+                        <p id="username" class="text-[#00FF41]"></p>
                     </div>
 
                 </div>
 
                 <p id="bio" class="my-1 text-white/70"></p>
-                <p id="company" class="text-l font-bold"  ></p>
+                <p id="company" class="text-l font-bold"></p>
                 <p id="location"></p>
                 <p id="created_at"></p>
+
                 <br>
 
                 <div class="grid grid-cols-3 gap-5 text-center">
@@ -97,23 +87,52 @@
                         <p class="text-sm text-white/50">Following</p>
                     </div>
 
-
-
                 </div>
 
-                <a
-                    id="link"
-                    href="#"
-                    target="_blank"
-                    class="mt-6 block rounded-full bg-[#00FF41] p-3 text-center font-bold text-black"
-                >
+                <a id="link" href="#" target="_blank"
+                    class="mt-6 block rounded-full bg-[#00FF41] p-3 text-center font-bold text-black">
                     View GitHub Profile
                 </a>
 
             </div>
-
         </div>
 
+
+        
+
+        <section class="w-full max-w-5xl mt-12 rounded-3xl border border-white/20 bg-black/40 p-6 shadow-xl">
+
+            <h2 class="text-3xl font-bold mb-2">
+                Repositories
+            </h2>
+
+            <p class="text-white/50 mb-6">
+                Explore GitHub repositories
+            </p>
+
+            <div id="repos-list" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <p class="text-white/50">Loading repositories...</p>
+            </div>
+
+            <div id="pagination" class="flex justify-center items-center gap-4 mt-8">
+
+                <button id="previous"
+                    class="rounded-full border border-white/30 px-5 py-2 hover:bg-[#00FF41] hover:text-black disabled:opacity-30">
+                    Previous
+                </button>
+
+                <span id="page-number" class="font-bold">
+                    Page 1
+                </span>
+
+                <button id="next"
+                    class="rounded-full border border-white/30 px-5 py-2 hover:bg-[#00FF41] hover:text-black disabled:opacity-30">
+                    Next
+                </button>
+
+            </div>
+
+        </section>
 
     </main>
 
