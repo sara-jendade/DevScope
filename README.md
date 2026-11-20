@@ -140,3 +140,7 @@ https://devscope-ivory.vercel.app/
 ##Netify : 
 
 https://deploy-preview-6--devscopeproject.netlify.app/
+
+##Jira : 
+
+https://sarajendade.atlassian.net/jira/software/projects/DEV/boards/102?sprintStarted=true&sprints=106&filter=&groupBy=none&atlOrigin=eyJpIjoiMjJjNWMzNGNiYmJmNGUwMTkyZTI5ODM1YTMxOTljZGYiLCJwIjoiaiJ9 
