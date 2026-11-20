@@ -8,12 +8,21 @@ search.addEventListener("submit", (event) => {
 
     const user = username.value.trim();
 
+    const regex = /^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,37}[a-zA-Z0-9])?$/;
+
     if (!user) {
-        result.innerText = "Please enter a GitHub username.";
+        result.textContent = "Please enter a GitHub username.";
         return;
     }
 
-    const url = `recherche.html?username=${encodeURIComponent(user)}`;
+    if (!regex.test(user)) {
+        result.textContent = "Invalid username. Use 1-39 letters, numbers or hyphens. Username cannot start or end with a hyphen.";
+        return;
+    }
+
+    result.textContent = "";
+
+    const url = `profil.html?username=${encodeURIComponent(user)}`;
 
     window.location.href = url;
-});
+}); 
