@@ -1,4 +1,3 @@
-
 const result = document.getElementById("result");
 
 const params = new URLSearchParams(window.location.search);

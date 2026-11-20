@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find good developers">
+    <meta name="description" content="DevScope helps recruiters discover developers through their GitHub profiles and repositories.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +15,8 @@
     >
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="api.js" defer></script>
 
-    <title>DevScope</title>
+    <title>DevScope - Discover Developers</title>
 </head>
 
 <body class="min-h-screen bg-gradient-to-br from-[#030303] via-[#001A08] to-[#00FF41] text-white flex flex-col">
@@ -58,29 +57,130 @@
 
     </header>
 
-    <main class="flex-1 flex flex-col items-center justify-center gap-6 p-4">
+    <main class="flex-1">
 
-        <form id="search" class="flex w-full max-w-2xl gap-3">
+        <section class="flex min-h-[80vh] flex-col items-center justify-center gap-8 px-6 py-20 text-center">
 
-            <input
-                id="username"
-                type="text"
-                placeholder="Search by github username :"
-                class="flex-1 min-w-0 rounded-full border border-white/20 bg-white/10 px-5 py-5 text-white outline-none"
+            <span class="rounded-full border border-[#00FF41]/30 bg-[#00FF41]/10 px-4 py-2 text-sm text-[#00FF41]">
+                Developer Discovery Platform
+            </span>
+
+            <h1 class="max-w-4xl font-['Redaction'] text-5xl font-bold leading-tight sm:text-7xl">
+                Find the developers
+                <span class="text-[#00FF41]">behind the code.</span>
+            </h1>
+
+            <p class="max-w-2xl text-base leading-8 text-white/60 sm:text-lg">
+                Discover talented developers through their GitHub profiles.
+                Explore their repositories, understand their work, and
+                save promising candidates in one place.
+            </p>
+
+            <a
+                href="recherche.html"
+                class="rounded-full border border-[#00FF41]/40 bg-gradient-to-br from-[#030303] via-[#001A08] to-[#00FF41] px-8 py-4 font-bold text-white shadow-[0_0_20px_rgba(0,255,65,0.15)] transition hover:scale-105 hover:shadow-[0_0_25px_rgba(0,255,65,0.3)]"
             >
+                Explore GitHub Profiles →
+            </a>
 
-            <button
-                type="submit"
-                class="rounded-full bg-gradient-to-br from-[#030303] via-[#001A08] to-[#00FF41] px-8 py-4 font-bold text-white transition hover:opacity-80"
+        </section>
+
+        <section class="mx-auto max-w-6xl px-6 pb-24">
+
+            <div class="mb-12 text-center">
+
+                <h2 class="font-['Redaction'] text-3xl font-bold sm:text-4xl">
+                    What you can do with <span class="text-[#00FF41]">DevScope</span>
+                </h2>
+
+                <p class="mt-4 text-white/50">
+                    Everything you need to discover and keep track of developers.
+                </p>
+
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-3">
+
+                <article class="rounded-3xl border border-white/10 bg-black/30 p-8 backdrop-blur-xl transition hover:border-[#00FF41]/40">
+
+                    <div class="mb-6 flex size-12 items-center justify-center rounded-xl border border-[#00FF41]/30 bg-[#00FF41]/10 text-xl text-[#00FF41]">
+                        01
+                    </div>
+
+                    <h3 class="text-xl font-bold">
+                        GitHub Profile Analysis
+                    </h3>
+
+                    <p class="mt-3 leading-7 text-white/50">
+                        Discover developer profiles, their experience,
+                        activity, and public information.
+                    </p>
+
+                </article>
+
+                <article class="rounded-3xl border border-white/10 bg-black/30 p-8 backdrop-blur-xl transition hover:border-[#00FF41]/40">
+
+                    <div class="mb-6 flex size-12 items-center justify-center rounded-xl border border-[#00FF41]/30 bg-[#00FF41]/10 text-xl text-[#00FF41]">
+                        02
+                    </div>
+
+                    <h3 class="text-xl font-bold">
+                        Repository Exploration
+                    </h3>
+
+                    <p class="mt-3 leading-7 text-white/50">
+                        Explore their projects, programming languages,
+                        repositories, and contributions.
+                    </p>
+
+                </article>
+
+                <article class="rounded-3xl border border-white/10 bg-black/30 p-8 backdrop-blur-xl transition hover:border-[#00FF41]/40">
+
+                    <div class="mb-6 flex size-12 items-center justify-center rounded-xl border border-[#00FF41]/30 bg-[#00FF41]/10 text-xl text-[#00FF41]">
+                        03
+                    </div>
+
+                    <h3 class="text-xl font-bold">
+                        Candidate Shortlist
+                    </h3>
+
+                    <p class="mt-3 leading-7 text-white/50">
+                        Save interesting candidates and keep their profiles
+                        organized for later.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="mx-6 mb-20 rounded-3xl border border-[#00FF41]/20 bg-black/30 px-6 py-16 text-center backdrop-blur-xl sm:mx-auto sm:max-w-6xl">
+
+            <h2 class="font-['Redaction'] text-3xl font-bold sm:text-4xl">
+                Ready to discover your next developer?
+            </h2>
+
+            <p  class="mx-auto mt-4 max-w-xl leading-7 text-white/50">
+                Start exploring GitHub profiles and find developers
+                whose skills match your needs.
+            </p>
+
+            <a
+                href="recherche.html"
+                class="mt-8 inline-block rounded-full bg-[#00FF41] px-8 py-4 font-bold text-black transition hover:bg-[#B7FFCB]"
             >
-                Search
-            </button>
+                Start Searching →
+            </a>
 
-        </form>
-
-        <div id="result" class="w-full max-w-2xl"></div> 
+        </section>
 
     </main>
+
+    <footer class="border-t border-white/10 px-6 py-6 text-center text-sm text-white/40">
+        DevScope — Discover developers through their code.
+    </footer>
 
 </body>
 </html>
